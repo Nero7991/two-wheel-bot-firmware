@@ -1,0 +1,83 @@
+/*
+ * Copyright (c) 2021 Nordic Semiconductor ASA
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/* This devicetree overlay file will be automatically picked by the Zephyr
+ * build system when building the sample for the nucleo_f302r8 board. It shows
+ * how the example-application can be built on sample boards already provided
+ * by Zephyr.
+ */
+
+/* I2C device example */
+&i2c2 {
+     mpu6050: mpu6050@68 {
+      status = "okay";
+      compatible = "invensense,mpu6050";
+      label = "MPU6050";
+      reg = <0x68>;
+     };
+     pca9685: pca9685@5f {
+      status = "okay";
+      compatible = "nxp,pca9685-pwm";
+      label = "PCA9685";
+      reg = <0x5f>;
+      #pwm-cells = <2>;
+	};
+};
+
+/ {
+	pwmleds {
+		status = "okay";
+		compatible = "pwm-leds";
+
+		s_pwm0: s-pwm-0 {
+			pwms = <&pca9685 0 PWM_MSEC(5) PWM_POLARITY_NORMAL>;
+		};
+		s_pwm1: s-pwm-1 {
+			pwms = <&pca9685 1 PWM_MSEC(5) PWM_POLARITY_NORMAL>;
+		};
+		s_pwm2: s-pwm-2 {
+			pwms = <&pca9685 2 PWM_MSEC(5) PWM_POLARITY_NORMAL>;
+		};
+		s_pwm3: s-pwm-3 {
+			pwms = <&pca9685 3 PWM_MSEC(5) PWM_POLARITY_NORMAL>;
+		};
+		s_pwm4: s-pwm-4 {
+			pwms = <&pca9685 4 PWM_MSEC(5) PWM_POLARITY_NORMAL>;
+		};
+		s_pwm5: s-pwm-5 {
+			pwms = <&pca9685 5 PWM_MSEC(5) PWM_POLARITY_NORMAL>;
+		};
+		s_pwm6: s-pwm-6 {
+			pwms = <&pca9685 6 PWM_MSEC(5) PWM_POLARITY_NORMAL>;
+		};
+		s_pwm7: s-pwm-7 {
+			pwms = <&pca9685 7 PWM_MSEC(5) PWM_POLARITY_NORMAL>;
+		};
+		s_pwm8: s-pwm-8 {
+			pwms = <&pca9685 8 PWM_MSEC(5) PWM_POLARITY_NORMAL>;
+		};
+		s_pwm9: s-pwm-9 {
+			pwms = <&pca9685 9 PWM_MSEC(5) PWM_POLARITY_NORMAL>;
+		};
+		s_pwm10: s-pwm-10 {
+			pwms = <&pca9685 10 PWM_MSEC(5) PWM_POLARITY_NORMAL>;
+		};
+		s_pwm11: s-pwm-11 {
+			pwms = <&pca9685 11 PWM_MSEC(5) PWM_POLARITY_NORMAL>;
+		};
+		s_pwm12: s-pwm-12 {
+			pwms = <&pca9685 12 PWM_MSEC(5) PWM_POLARITY_NORMAL>;
+		};
+		s_pwm13: s-pwm-13 {
+			pwms = <&pca9685 13 PWM_MSEC(5) PWM_POLARITY_NORMAL>;
+		};
+		s_pwm14: s-pwm-14 {
+			pwms = <&pca9685 14 PWM_MSEC(5) PWM_POLARITY_NORMAL>;
+		};
+		s_pwm15: s-pwm-15 {
+			pwms = <&pca9685 15 PWM_MSEC(5) PWM_POLARITY_NORMAL>;
+		};
+	};
+};

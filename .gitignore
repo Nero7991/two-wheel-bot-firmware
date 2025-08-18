@@ -1,0 +1,82 @@
+# Zephyr build artifacts
+build/
+build-*/
+*.elf
+*.bin
+*.hex
+*.dfu
+
+# West workspace artifacts (located in parent directory)
+/../.west/
+/**/build/
+
+# Zephyr modules and dependencies (in parent directory)
+/../zephyr/
+/../modules/
+/../bootloader/
+/../tools/
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+
+# IDE files
+.vscode/
+*.code-workspace
+.idea/
+*.iml
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# OS specific
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*~
+*.swp
+*.swo
+.#*
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Log files
+*.log
+
+# Generated files
+tags
+TAGS
+cscope.*
+
+# Backup files
+*.bak
+*.orig
+
+# Editor specific
+.editorconfig
+*.sublime-project
+*.sublime-workspace
