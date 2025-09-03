@@ -57,7 +57,11 @@ public:
         // Normalize inputs (same as in training)
         float input[INPUT_SIZE];
         input[0] = constrain(angle / (M_PI / 3), -1.0, 1.0);
-        input[1] = constrain(angularVelocity / 10.0, -1.0, 1.0);
+        //input[0] = constrain(angle * 3, -1.0, 1.0);
+
+        input[1] = constrain(-angularVelocity / 10.0, -1.0, 1.0);
+        //input[1] = constrain(angularVelocity, -1.0, 1.0);
+
         
         // Hidden layer computation
         float hidden[HIDDEN_SIZE];

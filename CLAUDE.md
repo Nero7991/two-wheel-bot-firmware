@@ -1,0 +1,1 @@
+- Do not kill the node process directly. The code-server gets killed as well!! If needed, find the exact PID for port 3010 and do a kill <PID>

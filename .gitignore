@@ -80,3 +80,9 @@ cscope.*
 .editorconfig
 *.sublime-project
 *.sublime-workspace
+
+# Old model files
+*.old*
+
+*_env*
+*.claude*web-plotter/
